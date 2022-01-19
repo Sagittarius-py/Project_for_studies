@@ -1,0 +1,2 @@
+1. Użyć przycisku do scrollowania z pierwszego portfolio: https://github.com/Sagittarius-py/Portfolio-pure_html-css
+2. uzyskać efekt pojawiającego się tekstu po najechaniu na kafelek na stronie startowej
