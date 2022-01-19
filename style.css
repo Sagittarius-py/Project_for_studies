@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+/* Body poniżej */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background-image: linear-gradient(
+    135deg,
+    #8860d0 13%,
+    #5ab9ea 51%,
+    #38d9a9 87%
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* Cały header, navbar, logo itd */
+
+header {
+  width: 100vw;
+
+  /* clip-path: polygon(100% 0, 100% 60%, 30% 100%, 0 60%, 0 0); */
+  height: 15vh;
+  background-color: white;
+  /* padding: 0 50px 0 30px; */
+  position: fixed;
+  z-index: 10;
+
+  box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+    12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+    41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+    100px 100px 80px rgba(0, 0, 0, 0.07);
+}
+#logo {
+  position: absolute;
+  width: 40vh;
+  margin-top: -2vh;
+  padding-left: 5vw;
+}
+#navbar {
+  width: 98vw;
+  float: right;
+
+  height: 15vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.nav-btn {
+  width: 12%;
+  height: 35%;
+  margin: 0 10px 0 10px;
+  float: right;
+  border-radius: 10px;
+  border: 3px solid black;
+  background: none;
+  color: black;
+  font-weight: bold;
+  font-size: 1.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.nav-btn:hover {
+  background-color: rgb(199, 199, 199);
+  transition: 0.5s ease-out;
+}
+.icon {
+  height: 80%;
+  margin: 10px;
+}
+
+/* to co poniżej headera */
+
+section {
+  padding-top: 10vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+div.about {
+  width: 30vw;
+  height: 60vh;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(13px);
+  -webkit-backdrop-filter: blur(13px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  grid-area: 2 / 2 / 5 / 4;
+}
