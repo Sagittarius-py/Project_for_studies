@@ -1,16 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
-
 /* Body poniżej */
 body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
-  background-image: linear-gradient(
-    135deg,
-    #8860d0 13%,
-    #5ab9ea 51%,
-    #38d9a9 87%
-  );
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -19,83 +12,125 @@ body {
 /* Cały header, navbar, logo itd */
 
 header {
-  width: 100vw;
-
-  /* clip-path: polygon(100% 0, 100% 60%, 30% 100%, 0 60%, 0 0); */
+  /* width: 100vw; */
   height: 15vh;
-  background-color: white;
-  /* padding: 0 50px 0 30px; */
-  position: fixed;
-  z-index: 10;
-
-  box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
-    6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
-    12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
-    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
-    41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
-    100px 100px 80px rgba(0, 0, 0, 0.07);
-}
-#logo {
   position: absolute;
-  width: 40vh;
-  margin-top: -2vh;
-  padding-left: 5vw;
+  z-index: 10;
+  padding-top: 10px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 }
-#navbar {
-  width: 98vw;
-  float: right;
 
-  height: 15vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
+#logo {
+  margin: -10px 0 0 30px;
+  position: absolute;
+  height: 80px;
+  grid-area: 0 / 1 / 1 / 2;
 }
 .nav-btn {
-  width: 12%;
-  height: 35%;
-  margin: 0 10px 0 10px;
-  float: right;
-  border-radius: 10px;
-  border: 3px solid black;
+  width: 100px;
+  height: 40px;
   background: none;
   color: black;
-  font-weight: bold;
-  font-size: 1.5vw;
+  font-size: 18pt;
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
   transition: 0.5s;
+  border-radius: 20px;
+  font-weight: bold;
+  padding: 0 10px 0 10px;
 }
 .nav-btn:hover {
-  background-color: rgb(199, 199, 199);
-  transition: 0.5s ease-out;
+  background-color: rgba(65, 65, 65, 0.5);
+  transition: 0.5s;
 }
 .icon {
   height: 80%;
   margin: 10px;
 }
-
+#home-btn {
+  grid-area: 1 / 6 / 2 / 7;
+}
+#modelS-btn {
+  grid-area: 1 / 9 / 2 / 10;
+}
+#modelX-btn {
+  grid-area: 1 / 10 / 2 / 11;
+}
+#model3-btn {
+  grid-area: 1 / 11 / 2 / 12;
+}
 /* to co poniżej headera */
 
-section {
-  padding-top: 10vh;
-  width: 100vw;
+section#jed {
+  background-image: url("img/tlo3.jpg");
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+h1#title {
+  position: absolute;
+  margin-top: 10%;
+  font-size: 50pt;
+}
+section#dwa {
+  background-color: black;
+  width: 100%;
+  height: 120vh;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(6, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 }
-div.about {
-  width: 30vw;
-  height: 60vh;
-  background: rgba(255, 255, 255, 0.5);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(13px);
-  -webkit-backdrop-filter: blur(13px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  grid-area: 2 / 2 / 5 / 4;
+#div-title {
+  grid-area: 1 / 3 / 2 / 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  position: absolute;
+  justify-self: center;
 }
+h2#title2 {
+  font-size: 50pt;
+  color: white;
+  font-weight: lighter;
+}
+.front {
+  width: 30vw;
+  height: 35vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+div#kafel1 {
+  grid-area: 3 / 2 / 4 / 3;
+  background-image: url("modele/3front.jpg");
+}
+div#kafel1:hover {
+}
+div#kafel2 {
+  grid-area: 3 / 4 / 4 / 5;
+  background-image: url("modele/sfront.jpg");
+}
+div#kafel3 {
+  grid-area: 5 / 2 / 6 / 3;
+  background-image: url("modele/xfront.jpg");
+}
+div#kafel4 {
+  grid-area: 5 / 4 / 6 / 5;
+  background-image: url("modele/3front.jpg");
+}
+
+/* kategorie */
