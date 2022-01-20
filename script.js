@@ -31,7 +31,6 @@ function showFrontInfo(x) {
 }
 
 function reset() {
-  console.log(event);
   let dziecko = event.target.firstChild;
   dziecko.style.cssText =
     "color: rgba(255, 255, 255, 0); background-color: rgba(0, 0, 0, 0);";

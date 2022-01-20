@@ -161,6 +161,12 @@ h2#title2 {
   height: 35vh;
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: 10px;
+}
+div#kafel1 {
+  grid-area: 3 / 2 / 4 / 3;
+  background-image: url("modele/3front.jpg");
+  padding: 0;
 }
 div#kafel1 {
   grid-area: 3 / 2 / 4 / 3;
@@ -170,15 +176,20 @@ div#kafel1 {
 h1.kafel-title {
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   transition: 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0;
   padding: 0;
   color: rgba(255, 255, 255, 0);
   background-color: rgba(0, 0, 0, 0);
 }
+/* a {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  } */
 
 div#kafel2 {
   grid-area: 3 / 4 / 4 / 5;
@@ -190,7 +201,165 @@ div#kafel3 {
 }
 div#kafel4 {
   grid-area: 5 / 4 / 6 / 5;
-  background-image: url("modele/3front.jpg");
+  background-image: url("modele/truckfront.jpg");
 }
 
-/* kategorie */
+/*!!!!!!!!!!!!!! Model S !!!!!!!!!!!!!!*/
+
+section#sec-1-modelS {
+  width: 100%;
+  height: 100vh;
+  background: url(./img/tlo-modelS.jpg);
+  background-position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div#section-s-content {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 80%;
+  height: 80vh;
+}
+h1#sec-s-tit {
+  width: 100%;
+  margin: 50px;
+  font-size: 25pt;
+}
+img#col-s {
+  width: 550px;
+  height: 350px;
+  margin: 20px 0 0 50px;
+  border-radius: 20px;
+}
+p#sec-s-p {
+  width: 500px;
+  height: 550px;
+  float: right;
+  margin-right: 100px;
+  font-size: 15pt;
+  font-weight: bold;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/*!!!!!!!!!!!!!! Model X !!!!!!!!!!!!!!*/
+
+section#sec-1-modelX {
+  width: 100%;
+  height: 100vh;
+  background: url(./img/tlo-modelX.jpg);
+  background-position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div#section-x-content {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 80%;
+  height: 80vh;
+}
+h1#sec-x-tit {
+  width: 100%;
+  margin: 50px;
+  font-size: 25pt;
+}
+img#col-x {
+  width: 650px;
+  height: 350px;
+  margin: 20px 0 0 50px;
+  border-radius: 20px;
+}
+p#sec-x-p {
+  width: 500px;
+  height: 550px;
+  float: right;
+  margin-right: 100px;
+  font-size: 15pt;
+  font-weight: bold;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/*!!!!!!!!!!!!!! Model 3 !!!!!!!!!!!!!!*/
+
+section#sec-1-model3 {
+  width: 100%;
+  height: 100vh;
+  background: url(./img/tlo-model3.jpg);
+  background-position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div#section-3-content {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 80%;
+  height: 80vh;
+}
+h1#sec-3-tit {
+  width: 100%;
+  margin: 50px;
+  font-size: 25pt;
+}
+img#col-3 {
+  width: 650px;
+  height: 350px;
+  margin: 20px 0 0 50px;
+  border-radius: 20px;
+}
+p#sec-3-p {
+  width: 500px;
+  height: 550px;
+  float: right;
+  margin-right: 100px;
+  font-size: 15pt;
+  font-weight: bold;
+  text-align: justify;
+  text-justify: inter-word;
+}
+/*!!!!!!!!!!!!!! Listy !!!!!!!!!!!!!!*/
+
+ul {
+  list-style-type: none;
+  float: right;
+  position: absolute;
+  background-color: white;
+  padding: 20px;
+  border-radius: 0 20px 20px 0;
+}
+
+/*!!!!!!!!!!!!!! Stopka !!!!!!!!!!!!!!*/
+
+footer {
+  width: 100%;
+  height: 15vh;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+span {
+  font-size: 20pt;
+}
