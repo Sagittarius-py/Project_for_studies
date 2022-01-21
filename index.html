@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Header - pasek nawigacyjny -->
     <header>
       <a href="https://www.tesla.com/"
         ><img id="logo" src="./img/logo.png"
@@ -18,26 +19,49 @@
       <a href="./sup_page_2.html" class="nav-btn" id="modelX-btn"> Model X </a>
       <a href="./sup_page_3.html" class="nav-btn" id="model3-btn"> Model 3 </a>
     </header>
-    <section id="jed">
-      <h1 id="title">Wybierz model dla siebie</h1>
-      <button class="arrow-btn" onclick="scrollWin(0, 1000)">&#8595</button>
-    </section>
-    <section id="dwa">
-      <div id="div-title"><h2 id="title2">Oto co oferujemy</h2></div>
 
-      <div class="front" id="kafel1"><h1 class="kafel-title" id="kafel1-title">
-        Model 3 <a href="/sup_page_1.html"></a>
+    <!-- Sekcja 1 poniżej -->
+    
+
+    <section id="jed">
+
+      <h1 id="title">WYBIERZ MODEL DLA SIEBIE</h1>
+      <button id="arrow-btn1" onclick="scrollWin(0, 1050)">&#8595</button>
+    </section>
+
+    <!-- wideo -->
+    <div id="video-container">
+    <video autoplay muted loop id="myVideo">
+      <source src="./video/Roadster.mp4" type="video/mp4">
+
+    </video>
+    <button id="arrow-btn2" onclick="scrollWin(0, 1000)">&#8595</button>
+
+  </div>
+
+
+
+    <!-- Sekcja 2 poniżej -->
+
+    <section id="dwa">
+      <div id="div-title"><h2 id="title2">NASZA OFERTA</h2></div>
+
+      <div class="front" id="kafel1" onclick="linkDo(`/sup_page_1.html`)"><h1 class="kafel-title" id="kafel1-title">
+        Model 3 
       </h1></div>
-      <div class="front" id="kafel2"><h1 class="kafel-title" id="kafel2-title">
-        Model S<a href="/sup_page_2.html"></a>
+      <div class="front" id="kafel2" onclick="linkDo(`/sup_page_2.html`)"><h1 class="kafel-title" id="kafel2-title">
+        Model S
       </h1></div>
-      <div class="front" id="kafel3"><h1 class="kafel-title" id="kafel3-title">
-        Model X<a href="/sup_page_3.html"></a>
+      <div class="front" id="kafel3" onclick="linkDo(`/sup_page_3.html`)"><h1 class="kafel-title" id="kafel3-title">
+        Model X
       </h1></div>
       <div class="front" id="kafel4"><h1 class="kafel-title" id="kafel4-title">
         Coming soon... <a href=""></a>
       </h1></div>
     </section>
+
+    <!-- Stopka poniżej -->
+
     <footer>
       <h4>&copy; All rights reserved. Filip Sieniawski - Wiktor Orzeszko</h4><br>
       <p>tel. +48 577371102 +48 533955103  <span>|</span> nr. legitymacji: s26594, s26588</p>

@@ -90,3 +90,8 @@ kafel4.addEventListener(
     reset();
   })
 );
+
+function linkDo(link) {
+  window.location = link;
+  console.log("cokolwiek");
+}
