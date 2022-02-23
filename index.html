@@ -4,35 +4,39 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Współczesna motoryzacja</title>
+    <title>Fatbike Śląsk</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Header - pasek nawigacyjny -->
-    <header>
-      <a href="https://www.tesla.com/"
-        ><img id="logo" src="./img/logo.png" alt="Logo Tesli"
-      /></a>
-
-      <a href="./index.html" class="nav-btn" id="home-btn"> Start </a>
-      <a href="./sup_page_1.html" class="nav-btn" id="modelS-btn"> Model S </a>
-      <a href="./sup_page_2.html" class="nav-btn" id="modelX-btn"> Model X </a>
-      <a href="./sup_page_3.html" class="nav-btn" id="model3-btn"> Model 3 </a>
-    </header>
-
     <!-- Sekcja 1 poniżej -->
     
 
     <section id="jed">
+      <div class="wrapper">
+        <div class="paralax_group">
+          <div class="paralax_layer mountains"></div>
+          <div class="paralax_layer buttons">
+            <a href="#dwa" class="nav-btn" id="modelS-btn"> Kontakt </a>
+          </div>
+          <div class="paralax_layer title">
+            <h1 id="title">FATBIKE ŚLĄSK</h1>
+          </div>
+          <div class="paralax_layer bike"></div>
+          <div class="paralax_layer arrow">
+            <button id="arrow-btn1" onclick="scrollWin(0, 1050)">&#8595</button>
+          </div>
+          <div class="paralax_layer snow"></div>
+        </div>
+      </div>
 
-      <h1 id="title">WYBIERZ MODEL DLA SIEBIE</h1>
-      <button id="arrow-btn1" onclick="scrollWin(0, 1050)">&#8595</button>
-    </section>
+
+
+
 
     <!-- wideo -->
     <div id="video-container">
     <video autoplay muted loop id="myVideo">
-      <source src="./video/Roadster.mp4" type="video/mp4">
+      <source src="./video/video.mp4" type="video/mp4">
 
     </video>
     <button id="arrow-btn2" onclick="scrollWin(0, 1000)">&#8595</button>
@@ -44,20 +48,38 @@
     <!-- Sekcja 2 poniżej -->
 
     <section id="dwa">
-      <div id="div-title"><h2 id="title2">NASZA OFERTA</h2></div>
+      <div id="div-title"><h2 id="title2">Skontaktuj sie z nami:</h2></div>
 
-      <div class="front" id="kafel1" onclick="linkDo(`/sup_page_3.html`)"><h1 class="kafel-title" id="kafel1-title">
-        Model 3 
-      </h1></div>
-      <div class="front" id="kafel2" onclick="linkDo(`/sup_page_1.html`)"><h1 class="kafel-title" id="kafel2-title">
-        Model S
-      </h1></div>
-      <div class="front" id="kafel3" onclick="linkDo(`/sup_page_2.html`)"><h1 class="kafel-title" id="kafel3-title">
-        Model X
-      </h1></div>
-      <div class="front" id="kafel4"><h1 class="kafel-title" id="kafel4-title">
-        Coming soon... <a href=""></a>
-      </h1></div>
+      <div class="kontakt" id="mail-to-subject"> 
+        <form action="script.php" method="post">
+          <h1>Zapisz się do Newslettera:</h1>
+
+          <label for="email-odb">E-Mail</label>
+          <input type="email" name="email-odb" id="email-odb">
+
+          <button type="submit" class="">Zapisz mnie!</button>
+        </form>
+      </div>
+
+
+      <div class="kontakt" id="mail-to-owner"> 
+        <form action="script.php" method="post">
+            <h1>Skontaktuj się z nami:</h1>
+  
+            <label for="email-nad">E-Mail</label>
+            <input type="email" name="e-mail-nad">
+
+            <label for="nadawca">Nadawca:</label>
+            <input type="text" name="nadawca" id="nadawca">
+
+            <label for="tresc">Wiadomość:</label>
+            <input type="text" name="tresc" id="tresc">
+
+            <button type="submit" class="zapisz">Zapisz mnie!</button>
+          </form>
+        </div>
+
+
     </section>
 
     <!-- Stopka poniżej -->

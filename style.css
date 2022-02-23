@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
   font-family: "Roboto", sans-serif;
@@ -30,34 +34,12 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  scroll-behavior: smooth;
-  background-color: black;
-}
-
-/* Cały header, navbar, logo itd */
-
-header {
-  /* width: 100vw; */
-  height: 15vh;
-  position: absolute;
-  z-index: 10;
-  padding-top: 10px;
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(11, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  height: 100%;
+  background-color: #222;
 }
 
-#logo {
-  margin: -10px 0 0 30px;
-  position: absolute;
-  height: 80px;
-}
+
 .nav-btn {
   width: 100px;
   height: 40px;
@@ -72,46 +54,87 @@ header {
   border-radius: 20px;
   font-weight: bold;
   padding: 0 10px 0 10px;
+  margin-left: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 .nav-btn:hover {
-  background-color: rgba(65, 65, 65, 0.5);
+  background-color: rgba(200, 200, 200, 0.5);
   transition: 0.5s;
 }
 .icon {
   height: 80%;
   margin: 10px;
 }
-#home-btn {
-  grid-area: 1 / 6 / 2 / 7;
-}
-#modelS-btn {
-  grid-area: 1 / 9 / 2 / 10;
-}
-#modelX-btn {
-  grid-area: 1 / 10 / 2 / 11;
-}
-#model3-btn {
-  grid-area: 1 / 11 / 2 / 12;
-}
+
 /* Sekcja 1 */
 
-section#jed {
-  background-image: url("img/tlo3.jpg");
+/* section#jed {
   width: 100%;
   height: 100vh;
-  background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   justify-content: center;
+} */
+.wrapper {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 300px;
 }
-h1#title {
+
+.parallax__group {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  transform-style: preserve-3d;
+}
+
+.parallax__layer {
   position: absolute;
-  margin-top: 10%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.mountains {
+  background: url("../img/gory.png") no-repeat center;
+  background-size: cover;
+  transform: translateZ(-600px) scale(3);
+  z-index: 1;
+}
+
+.bike {
+  background: url("../img/rower.png") no-repeat center;
+  background-size: cover;
+  transform: translateZ(-100px) scale(1);
+  z-index: 4;
+}
+
+.snow {
+  background: url("../img/fale.png") no-repeat center;
+  background-size: cover;
+  transform: translateZ(0) scale(1);
+  z-index: 6;
+}
+
+@media (min-width: 1126px) {
+  .sky,
+  .bushes,
+  .water,
+  .people1,
+  .people2,
+  .people3,
+  .hero-text {
+    background-size: contain;
+  }
+}
+
+h1#title {
   font-size: 50pt;
 }
+
 #arrow-btn1 {
-  position: absolute;
-  bottom: 100px;
   border: none;
   background: white;
   border-radius: 50%;
@@ -131,7 +154,7 @@ h1#title {
 
 /* wideo */
 #video-container {
-  margin-top: -20px;
+  /* margin-top: -20px; */
   width: 100%;
   height: 120vh;
   display: flex;
@@ -139,9 +162,10 @@ h1#title {
 }
 
 #myVideo {
-  min-height: 100%;
-  min-width: 100%;
+  max-height: 100%;
+  max-width: 100%;
   /* bottom: 0; */
+  padding: 50px 0 50px 0;
 }
 
 #arrow-btn2 {
@@ -167,19 +191,9 @@ h1#title {
 /* Sekcja 2 */
 
 section#dwa {
-  background-color: black;
+  background-image: url(./img/tlo2.jpg);
+  backdrop-filter: opacity(0.5);
   margin-top: -30px;
-  /* background-image: linear-gradient(
-    180deg,
-    #000000 0%,
-    #222222 10%,
-    #444444 25%,
-    #666666 40%,
-    #888888 60%,
-    #aaa 75%,
-    #ccc 90%,
-    #ffffff 100%
-  ); */
   width: 100%;
   height: 110vh;
   background-repeat: no-repeat;
@@ -204,199 +218,21 @@ h2#title2 {
   color: white;
   font-weight: lighter;
 }
-.front {
-  width: 30vw;
-  height: 35vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 10px;
-  cursor: pointer;
-}
-div#kafel1 {
-  grid-area: 3 / 2 / 4 / 3;
-  background-image: url("modele/3front.jpg");
-  padding: 0;
-}
-div#kafel1 {
-  grid-area: 3 / 2 / 4 / 3;
-  background-image: url("modele/3front.jpg");
-  padding: 0;
-}
-h1.kafel-title {
-  width: 100%;
-  height: 100%;
-  transition: 0.5s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-  color: rgba(255, 255, 255, 0);
-  background-color: rgba(0, 0, 0, 0);
-  border-radius: 10px;
-}
-/* a {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-  } */
 
-div#kafel2 {
-  grid-area: 3 / 4 / 4 / 5;
-  background-image: url("modele/sfront.jpg");
-}
-div#kafel3 {
-  grid-area: 5 / 2 / 6 / 3;
-  background-image: url("modele/xfront.jpg");
-}
-div#kafel4 {
-  grid-area: 5 / 4 / 6 / 5;
-  background-image: url("modele/truckfront.jpg");
-}
-
-/*!!!!!!!!!!!!!! Model S !!!!!!!!!!!!!!*/
-
-section#sec-1-modelS {
-  width: 100%;
-  height: 100vh;
-  background: url(./img/tlo-modelS.jpg);
-  background-position: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-div#section-s-content {
+div.kontakt {
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  width: 80%;
-  height: 80vh;
 }
-h1#sec-s-tit {
-  width: 100%;
-  margin: 50px;
-  font-size: 25pt;
-}
-img#col-s {
-  width: 550px;
-  height: 350px;
-  margin: 20px 0 0 50px;
-  border-radius: 20px;
-}
-p#sec-s-p {
-  width: 500px;
-  height: 550px;
+
+input {
   float: right;
-  margin-right: 100px;
-  font-size: 15pt;
-  font-weight: bold;
-  text-align: justify;
-  text-justify: inter-word;
 }
-
-/*!!!!!!!!!!!!!! Model X !!!!!!!!!!!!!!*/
-
-section#sec-1-modelX {
-  width: 100%;
-  height: 100vh;
-  background: url(./img/tlo-modelX.jpg);
-  background-position: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-div#section-x-content {
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  width: 80%;
-  height: 80vh;
-}
-h1#sec-x-tit {
-  width: 100%;
-  margin: 50px;
-  font-size: 25pt;
-}
-img#col-x {
-  width: 650px;
-  height: 350px;
-  margin: 20px 0 0 50px;
-  border-radius: 20px;
-}
-p#sec-x-p {
-  width: 500px;
-  height: 550px;
-  float: right;
-  margin-right: 100px;
-  font-size: 15pt;
-  font-weight: bold;
-  text-align: justify;
-  text-justify: inter-word;
-}
-
-/*!!!!!!!!!!!!!! Model 3 !!!!!!!!!!!!!!*/
-
-section#sec-1-model3 {
-  width: 100%;
-  height: 100vh;
-  background: url(./img/tlo-model3.jpg);
-  background-position: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-div#section-3-content {
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  width: 80%;
-  height: 80vh;
-}
-h1#sec-3-tit {
-  width: 100%;
-  margin: 50px;
-  font-size: 25pt;
-}
-img#col-3 {
-  width: 650px;
-  height: 350px;
-  margin: 20px 0 0 50px;
-  border-radius: 20px;
-}
-p#sec-3-p {
-  width: 500px;
-  height: 550px;
-  float: right;
-  margin-right: 100px;
-  font-size: 15pt;
-  font-weight: bold;
-  text-align: justify;
-  text-justify: inter-word;
-}
-/*!!!!!!!!!!!!!! Listy !!!!!!!!!!!!!!*/
-
-ul {
-  list-style-type: none;
-  float: right;
-  position: absolute;
-  background-color: white;
-  padding: 20px;
-  border-radius: 0 20px 20px 0;
+button.zapisz {
+  bottom: 0;
 }
 
 /*!!!!!!!!!!!!!! Stopka !!!!!!!!!!!!!!*/
@@ -413,4 +249,13 @@ footer {
 }
 span {
   font-size: 20pt;
+}
+
+@media (min-width: 1126px) {
+  .mountains,
+  .buttons,
+  .title,
+  .bike,
+  .arrow,
+  .snow;
 }
